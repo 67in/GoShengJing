@@ -43,10 +43,3 @@ func counter(w http.ResponseWriter, r *http.Request)  {
 	fmt.Fprintf(w, "Count %d\n", count)
 	mu.Unlock()
 }
-
-func counter1(w http.ResponseWriter, r *http.Request)  {
-	mu.Lock()
-	fmt.Fprintf(w, "Count %d\n", count)
-	mu.Unlock()
-}
-
